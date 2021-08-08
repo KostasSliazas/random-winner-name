@@ -36,7 +36,7 @@ html {
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
     margin: 0;
     -webkit-tap-highlight-color: transparent;
     -moz-tap-highlight-color: transparent;
@@ -100,11 +100,10 @@ nav {
 .navw {
     display: block;
     position: relative;
-    width: calc(80vh - 98px);
+    width: calc(100vw - 14px);
     margin: 0 auto;
     height: calc(100vh - 98px);
     text-align: center;
-    /*! transform-style: preserve-3d; */
 }
 
 .navw::before {
@@ -316,6 +315,7 @@ h1 {
     animation: welcome 1s steps(1, end) infinite;
     filter: drop-shadow(4px 4px 2px #000);
     text-shadow: 2px 2px 0 #7c0d80, 2px -2px 0 #7c0d80, -2px 2px 0 #7c0d80, -2px -2px 0 #7c0d80, 2px 0 0 #7c0d80, 0 2px 0 #7c0d80, -2px 0 0 #7c0d80, 0 -2px 0 #7c0d80;
+    margin: 0;
 }
 
 .arrow,
@@ -378,13 +378,13 @@ h1 {
 }
 #toggle {
     z-index: 111;
-    top: 0;
-    right: 0;
-    position: absolute;
-    width: auto;
     margin: 0;
     background:#990c56;
-    border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+}
+@media (min-width: 768px) {
+    .navw{
+        max-width: 30%;
+    }
 }
