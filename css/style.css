@@ -202,6 +202,8 @@ li span {
     z-index: 999;
     padding: 1em;
     width: 100%;
+    margin: 0 auto;
+    max-width: 480px;
 }
 
 .padding::before {
@@ -215,13 +217,15 @@ li span {
 
 .inner {
     border-radius: 10px;
-    background: #fff;
+    background: #eee;
     position: relative;
     padding: 1em;
 }
+
 #text-input {
     width: 100%;
 }
+
 #close {
     height: 48px;
     width: 48px;
