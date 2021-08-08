@@ -146,8 +146,8 @@ ul {
     background: repeating-radial-gradient(#990c56 0 24px, #dc78a6 25px 48px, #eb87b5 49px 72px, #fa96c4 73px 96px, #ffa5d3 97px 120px, #fa96c4 121px 144px, #eb87b5 145px 168px, #dc78a6 169px 192px)
 }
 
-#text-wrap,
-#text-wrap::before,
+.padding,
+.padding::before,
 nav::after {
     transform: translate(-50%, -50%);
     top: 50%;
@@ -193,25 +193,18 @@ li span {
     color: #fff
 }
 
-#text-wrap,
-#text-wrap::before {
+.padding,
+.padding::before {
     position: fixed
 }
 
-#text-wrap {
-    min-height: 50vh;
-    min-width: 60vw;
-    background: #fff;
-    padding: 48px 0;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 999
+.padding {
+    z-index: 999;
+    padding: 1em;
+    width: 100%;
 }
 
-#text-wrap::before {
+.padding::before {
     content: "";
     display: block;
     background: #00000070;
@@ -220,6 +213,15 @@ li span {
     z-index: -2
 }
 
+.inner {
+    border-radius: 10px;
+    background: #fff;
+    position: relative;
+    padding: 1em;
+}
+#text-input {
+    width: 100%;
+}
 #close {
     height: 48px;
     width: 48px;
