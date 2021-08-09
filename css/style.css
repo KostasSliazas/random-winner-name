@@ -4,7 +4,7 @@
     }
 }
 
-@keyframes rota2 {
+/* @keyframes rota2 {
     0% {
         transform: rotateZ(0)
     }
@@ -12,7 +12,7 @@
     to {
         transform: rotateZ(360deg)
     }
-}
+} */
 
 @keyframes welcome {
     50% {
@@ -26,9 +26,9 @@
     }
 }
 
-.rotate {
+/* .rotate {
     animation: .2s rota2 linear infinite
-}
+} */
 
 body,
 html {

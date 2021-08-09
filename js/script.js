@@ -16,17 +16,19 @@
     if (!e.target.previousElementSibling.disabled) {
       e.target.previousElementSibling.disabled = true
       e.target.innerText = 'Please wait...'
-      const ro = begin + rand(0, 360)
+      const ro = begin + rand(360, 9999)
       begin = ro
       ul.style.transform = `rotate(${ro}deg`
-      ul.classList.add('rotate')
+      ul.style.transitionDuration = randomTime / 1000 + 's'
+      // ul.classList.add('rotate')
       const tim = setTimeout(() => {
         inputs.forEach((e) => {
           e.checked = false
           e.disabled = false
         })
         clearTimeout(tim)
-        ul.classList.remove('rotate')
+        // ul.style.transitionDuration = '0s'
+        // ul.classList.remove('rotate')
         e.target.innerText = typeof computeElementPositions() !== 'undefined' ? computeElementPositions().innerText : 'No winners'
       }, randomTime)
     }
