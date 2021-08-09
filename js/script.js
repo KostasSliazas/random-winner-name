@@ -3,22 +3,25 @@
   'use strict'
   const ul = document.getElementsByTagName('ul')[0]
   const inputs = [...document.getElementsByTagName('input')]
+  let begin = 0
   computeRadius()
 
   function reset (e) {
     if (e.target.id === 'close' || e.target.id === 'toggle') document.getElementById('text-wrap').classList.toggle('hide')
     if (e.target.id !== 'laberls') return
-    let begin = 0
     ul.innerHTML = ''
     getInputs()
     computeRadius()
-    const randomTime = rand(2540, 9990)
+    const randomTime = rand(3000, 7777)
     if (!e.target.previousElementSibling.disabled) {
       e.target.previousElementSibling.disabled = true
       e.target.innerText = 'Please wait...'
-      const ro = begin + rand(360, 9999)
+      const ro = begin + rand(720, 9999)
       begin = ro
-      ul.style.transform = `rotate(${ro}deg`
+      // ul.style.transitionDuration = '0s'
+      // ul.style.transform = 'rotate(0deg)'
+      // ul.style['transform'].match(/\d+/gi).join('')
+      ul.style.transform = `rotate(${ro}deg)`
       ul.style.transitionDuration = randomTime / 1000 + 's'
       // ul.classList.add('rotate')
       const tim = setTimeout(() => {
