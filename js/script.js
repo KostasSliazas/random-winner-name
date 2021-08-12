@@ -7,11 +7,14 @@
   computeRadius()
 
   function reset (e) {
-    if (e.target.id === 'close' || e.target.id === 'toggle') document.getElementById('text-wrap').classList.toggle('hide')
+    if (e.target.id === 'close' || e.target.id === 'toggle') {
+      document.getElementById('text-wrap').classList.toggle('hide')
+      ul.innerHTML = ''
+      getInputs()
+      computeRadius()
+    }
     if (e.target.id !== 'laberls') return
-    ul.innerHTML = ''
-    getInputs()
-    computeRadius()
+
     const randomTime = rand(3000, 7777)
     if (!e.target.previousElementSibling.disabled) {
       e.target.previousElementSibling.disabled = true
