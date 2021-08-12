@@ -21,7 +21,7 @@
       // ul.style.transitionDuration = '0s'
       // ul.style.transform = 'rotate(0deg)'
       // ul.style['transform'].match(/\d+/gi).join('')
-      ul.style.transform = `rotate(${ro}deg)`
+      ul.style.transform = `rotate3d(0,0,1,${ro}deg)`
       ul.style.transitionDuration = randomTime / 1000 + 's'
       // ul.classList.add('rotate')
       const tim = setTimeout(() => {
@@ -42,7 +42,7 @@
     const eachRotate = 360 / li.length
     let rotate = 0
     li.forEach(e => {
-      e.style.transform = `rotateZ(${rotate}deg)`
+      e.style.transform = `rotate3d(0,0,1,${rotate}deg)`
       rotate += eachRotate
     })
   }

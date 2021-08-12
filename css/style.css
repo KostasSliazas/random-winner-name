@@ -131,6 +131,7 @@ nav,
 ul {
     width: 100%;
     top: 0;
+    overflow: hidden;
     display: block
 }
 
@@ -141,8 +142,8 @@ ul {
     font-size: 0;
     padding: 0;
     backface-visibility: hidden;
-    border: 6px dotted #eee;
-    box-shadow: 0 -55px 0 -48px #990c56, 0 55px 0 -48px #990c56, 55px 0 0 -48px #990c56, -55px 0 0 -48px #990c56, -39px -39px 0 -48px #990c56, 39px -39px 0 -48px #990c56, -39px 39px 0 -48px #990c56, 39px 39px 0 -48px #990c56, -22px -51px 0 -48px #990c56, -51px 22px 0 -48px #990c56, 51px -22px 0 -48px #990c56, -51px -22px 0 -48px #990c56, 51px 22px 0 -48px #990c56, 22px 51px 0 -48px #990c56, -22px 51px 0 -48px #990c56, 22px -51px 0 -48px #990c56;
+    border: 4px dotted #eee;
+    /* box-shadow: 0 -55px 0 -48px #990c56, 0 55px 0 -48px #990c56, 55px 0 0 -48px #990c56, -55px 0 0 -48px #990c56, -39px -39px 0 -48px #990c56, 39px -39px 0 -48px #990c56, -39px 39px 0 -48px #990c56, 39px 39px 0 -48px #990c56, -22px -51px 0 -48px #990c56, -51px 22px 0 -48px #990c56, 51px -22px 0 -48px #990c56, -51px -22px 0 -48px #990c56, 51px 22px 0 -48px #990c56, 22px 51px 0 -48px #990c56, -22px 51px 0 -48px #990c56, 22px -51px 0 -48px #990c56; */
     background: repeating-radial-gradient(#990c56 0 24px, #dc78a6 25px 48px, #eb87b5 49px 72px, #fa96c4 73px 96px, #ffa5d3 97px 120px, #fa96c4 121px 144px, #eb87b5 145px 168px, #dc78a6 169px 192px)
 }
 
