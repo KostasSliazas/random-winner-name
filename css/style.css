@@ -182,7 +182,6 @@ li {
     height: max-content;
     white-space: nowrap;
     overflow: hidden;
-    text-align: right
 }
 
 li span {
@@ -191,7 +190,9 @@ li span {
     font-size: 14px;
     background: #990c5580;
     line-height: 20px;
-    color: #fff
+    color: #fff;
+    transform: matrix(-1, 0, 0, -1, 0, 0);
+    text-align: left;
 }
 
 .padding,
