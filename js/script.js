@@ -7,12 +7,16 @@
   computeRadius()
 
   function reset (e) {
-    if (e.target.id === 'close' || e.target.id === 'toggle') {
-      document.getElementById('text-wrap').classList.toggle('hide')
+    const tetxtWrap = document.getElementById('text-wrap')
+
+    if (e.target.id === 'close') {
+      tetxtWrap.classList.add('hide')
       ul.innerHTML = ''
       getInputs()
       computeRadius()
     }
+
+    if (e.target.id === 'toggle') tetxtWrap.classList.remove('hide')
     if (e.target.id !== 'laberls') return
 
     const randomTime = rand(3000, 7777)
@@ -21,20 +25,14 @@
       e.target.innerText = 'Please wait...'
       const ro = begin + rand(720, 9999)
       begin = ro
-      // ul.style.transitionDuration = '0s'
-      // ul.style.transform = 'rotate(0deg)'
-      // ul.style['transform'].match(/\d+/gi).join('')
       ul.style.transform = `rotate3d(0,0,1,${ro}deg)`
       ul.style.transitionDuration = randomTime / 1000 + 's'
-      // ul.classList.add('rotate')
       const tim = setTimeout(() => {
         inputs.forEach((e) => {
           e.checked = false
           e.disabled = false
         })
         clearTimeout(tim)
-        // ul.style.transitionDuration = '0s'
-        // ul.classList.remove('rotate')
         e.target.innerText = typeof computeElementPositions() !== 'undefined' ? computeElementPositions().innerText : 'No winners'
       }, randomTime)
     }
