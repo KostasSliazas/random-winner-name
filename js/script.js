@@ -3,6 +3,7 @@
   'use strict'
   const ul = document.getElementsByTagName('ul')[0]
   const inputs = [...document.getElementsByTagName('input')]
+  const textInput = document.getElementById('text-input')
   let begin = 0
   computeRadius()
 
@@ -16,7 +17,10 @@
       computeRadius()
     }
 
-    if (e.target.id === 'toggle') tetxtWrap.classList.remove('hide')
+    if (e.target.id === 'toggle') {
+      setTimeout(()=>textInput.select(),50)
+      tetxtWrap.classList.remove('hide')
+    }
     if (e.target.id !== 'laberls') return
 
     const randomTime = rand(3000, 7777)
@@ -62,7 +66,6 @@
   }
 
   function getInputs () {
-    const textInput = document.getElementById('text-input')
     const text = textInput.value
     const filters = text.trim().replace(/\s/g, ' ').split(' ').filter(e => (e.length > 1) && e.replace(/\s+/, ''))
     filters.forEach(n => {
