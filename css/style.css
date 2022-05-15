@@ -1,33 +1,27 @@
+:root {
+    --color1: #120d1f;
+    --color2: #2c3365;
+    --color3: #675ebb;
+    --color4: #c093fa;
+    --color5: #ffd6f4;
+}
+
 @keyframes rota3 {
     to {
         transform: rotate(-35deg)
     }
 }
 
-/* @keyframes rota2 {
-    0% {
-        transform: rotateZ(0)
-    }
-
-    to {
-        transform: rotateZ(360deg)
-    }
-} */
-
 @keyframes welcome {
     50% {
-        color: #4E954E
+        color: var(--color3)
     }
 
     80%,
     90% {
-        color: #074307;
+        color: var(--color4)
     }
 }
-
-/* .rotate {
-    animation: .2s rota2 linear infinite
-} */
 
 body,
 html {
@@ -44,7 +38,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background: #222;
+    background: var(--color4);
     font: 16px/1.5 Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     flex-direction: column;
@@ -141,9 +135,8 @@ ul {
     font-size: 0;
     padding: 0;
     backface-visibility: hidden;
-    border: 4px dotted #540909;
-    /* box-shadow: 0 -55px 0 -48px #990c56, 0 55px 0 -48px #990c56, 55px 0 0 -48px #990c56, -55px 0 0 -48px #990c56, -39px -39px 0 -48px #990c56, 39px -39px 0 -48px #990c56, -39px 39px 0 -48px #990c56, 39px 39px 0 -48px #990c56, -22px -51px 0 -48px #990c56, -51px 22px 0 -48px #990c56, 51px -22px 0 -48px #990c56, -51px -22px 0 -48px #990c56, 51px 22px 0 -48px #990c56, 22px 51px 0 -48px #990c56, -22px 51px 0 -48px #990c56, 22px -51px 0 -48px #990c56; */
-    background:rgba(0, 0, 0, 0) radial-gradient(circle, rgb(93, 18, 18) 0px, rgb(93, 18, 18) 24px, rgb(96, 21, 21) 24px, rgb(96, 21, 21) 48px, rgb(99, 24, 24) 48px, rgb(99, 24, 24) 72px, rgb(102, 27, 27) 72px, rgb(102, 27, 27) 96px, rgb(105, 30, 30) 96px, rgb(105, 30, 30) 120px, rgb(108, 33, 33) 120px, rgb(108, 33, 33) 144px, rgb(111, 36, 36) 144px, rgb(111, 36, 36) 168px, rgb(114, 39, 39) 168px, rgb(114, 39, 39) 192px, rgb(117, 42, 42) 192px, rgb(117, 42, 42) 216px, rgb(120, 45, 45) 216px, rgb(120, 45, 45) 240px, rgb(123, 48, 48) 240px, rgb(123, 48, 48) 264px) repeat scroll 0% 0%;
+    border: 4px dotted var(--color3);
+    background: rgba(0, 0, 0, 0) radial-gradient(circle, var(--color3) 0px, var(--color2) 100%) repeat scroll 0% 0%;
 }
 
 .padding,
@@ -163,7 +156,7 @@ nav::after {
     content: "";
     height: 10px;
     width: 10px;
-    background: #E59A9A
+    background: var(--color2);
 }
 
 li,
@@ -187,9 +180,9 @@ li span {
     text-decoration: none;
     padding: 3%;
     font-size: 14px;
-    background: #54090942;
+    background: var(--color1);
     line-height: 20px;
-    color: #E59A9A;
+    color: var(--color5);
     transform: matrix(-1, 0, 0, -1, 0, 0);
     text-align: left;
 }
@@ -233,7 +226,7 @@ li span {
     border-radius: 50%;
     border: 0;
     appearance: none;
-    background: #777;
+    background: var(--color1);
     right: -14px;
     position: absolute;
     cursor: pointer;
@@ -270,14 +263,14 @@ h1 {
     text-align: center;
     animation: welcome 1s steps(1, end) infinite;
     filter: drop-shadow(4px 4px 2px #000);
-    text-shadow: 2px 2px 0 #327732, 2px -2px 0 #327732, -2px 2px 0 #327732, -2px -2px 0 #327732, 2px 0 0 #327732, 0 2px 0 #327732, -2px 0 0 #327732, 0 -2px 0 #327732
+    text-shadow: 2px 2px 0 var(--color2), 2px -2px 0 var(--color2), -2px 2px 0 var(--color2), -2px -2px 0 var(--color2), 2px 0 0 var(--color2), 0 2px 0 var(--color2), -2px 0 0 var(--color2), 0 -2px 0 var(--color2)
 }
 
 .arrow,
 a,
 h1 {
     font-variant-caps: all-small-caps;
-    color: #1B621B
+    color: var(--color3);
 }
 
 #spin+label,
@@ -303,8 +296,8 @@ li span {
 }
 
 #spin[disabled=""]+label {
-    background: #7B2121;
-    border: #540909 solid 1px;
+    background: var(--color2);
+    border: var(--color1) solid 1px;
 }
 
 #spin[disabled=""]~.arrow::before {
@@ -315,17 +308,19 @@ li span {
     color: #fff
 }
 
+button,
 #spin+label,
 #toggle {
-    background-color: #205a00;
-    border: #074307 solid 1px;
-    color: #e9e9e9;
+    background-color: var(--color2);
+    border: var(--color1) solid 1px;
+    color: var(--color5);
     border-radius: 10px;
     cursor: pointer;
     font-weight: 700;
     line-height: 48px;
     text-align: center;
     position: relative;
+    padding: 0 24px;
     transform-style: preserve-3d
 }
 

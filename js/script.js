@@ -4,21 +4,24 @@
   const ul = document.getElementsByTagName('ul')[0]
   const inputs = [...document.getElementsByTagName('input')]
   const textInput = document.getElementById('text-input')
+
   let begin = 0
   computeRadius()
 
   function reset (e) {
     const tetxtWrap = document.getElementById('text-wrap')
 
-    if (e.target.id === 'close') {
+    if (e.target.id === 'ok') {
       tetxtWrap.classList.add('hide')
       ul.innerHTML = ''
       getInputs()
       computeRadius()
     }
-
+    if (e.target.id === 'close') {
+      tetxtWrap.classList.add('hide')
+    }
     if (e.target.id === 'toggle') {
-      setTimeout(()=>textInput.select(),50)
+      setTimeout(() => textInput.select(), 50)
       tetxtWrap.classList.remove('hide')
     }
     if (e.target.id !== 'laberls') return
