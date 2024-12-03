@@ -12,7 +12,7 @@ A lightweight web application to randomly pick a winner from a list of names. Bu
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/<your-username>/random-winner-name.git
+   git clone https://github.com/KostasSliazas/random-winner-name.git
 2. Navigate to the project directory:
    ```bash
     cd random-winner-name
