@@ -21,10 +21,10 @@ A lightweight web application to randomly pick a winner from a list of names. Bu
     firefox index.html
    
 ## Compiling with Google Closure
-    Edit the source files.
-    Compile the code using Google Closure Compiler:
+   
+Edit the source files.
+Compile the code using Google Closure Compiler:
     
    ```bash
     google-closure-compiler --js=script.js --js_output_file=output.js   --compilation_level=ADVANCED_OPTIMIZATIONS   --language_in=ES6
-
-This project is licensed under the MIT License.
+   
