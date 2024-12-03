@@ -1,9 +1,9 @@
 :root {
     --color1: #120d1f;
     --color2: #2c3365;
-    --color3: #675ebb;
-    --color4: #c093fa;
-    --color5: #ffd6f4;
+    --color3: #315781;
+    --color4: #f6f1fd;
+    --color5: #ffeffb;
 }
 
 @keyframes rota3 {
@@ -39,6 +39,7 @@ body {
     -ms-user-select: none;
     user-select: none;
     background: var(--color4);
+    background:linear-gradient(0deg, var(--color5), var(--color3));
     font: 16px/1.5 Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     flex-direction: column;
@@ -124,7 +125,6 @@ nav,
 ul {
     width: 100%;
     top: 0;
-    overflow: hidden;
     display: block
 }
 
@@ -136,7 +136,8 @@ ul {
     padding: 0;
     backface-visibility: hidden;
     border: 4px dotted var(--color3);
-    background: rgba(0, 0, 0, 0) radial-gradient(circle, var(--color3) 0px, var(--color2) 100%) repeat scroll 0% 0%;
+    background: var(--color4);
+    box-shadow: 0 0 0 2px var(--color3);
 }
 
 .padding,
@@ -180,11 +181,13 @@ li span {
     text-decoration: none;
     padding: 3%;
     font-size: 14px;
-    background: var(--color1);
     line-height: 20px;
-    color: var(--color5);
-    transform: matrix(-1, 0, 0, -1, 0, 0);
-    text-align: left;
+    color: #000;
+    border: 1px solid var(--color3);
+    /* transform: matrix(-1, 0, 0, -1, 0, 0); */
+    text-align: right;
+    border-left:0;
+    border-right: 0;
 }
 
 .padding,
@@ -213,7 +216,7 @@ li span {
     border-radius: 10px;
     background: #eee;
     position: relative;
-    padding: 1em;
+    padding: 1em 2em;
 }
 
 #text-input {
@@ -226,7 +229,8 @@ li span {
     border-radius: 50%;
     border: 0;
     appearance: none;
-    background: var(--color1);
+    background: #000;
+    background:var(--color2);
     right: -14px;
     position: absolute;
     cursor: pointer;
@@ -235,7 +239,7 @@ li span {
 
 #close::after,
 #close::before {
-    border-left: 2px solid #eee;
+    border-left: 2px solid var(--color5);
     content: '';
     display: block;
     height: 30px;
